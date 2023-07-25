@@ -7,7 +7,7 @@ const Todo = () => {
     return(
         <div>
             <h2>My todos</h2>
-            <div>
+            <div className="todo-0">
                 {
                     list.length > 0 &&
                     list.map(item => (
@@ -15,7 +15,7 @@ const Todo = () => {
                     ))
                 }
             </div>
-            <button onClick={() => setList([...list, "New Todo"])}>add todo</button>
+            <button className="add-todo-btn" onClick={() => setList([...list, "New Todo"])}>Add Todo</button>
         </div>
     )
 }

@@ -2,14 +2,20 @@ import React, { useState } from "react";
 
 const Count = () => {
 
-    let [count, setCount] = useState(1000000000)
+    let [calc, setClc] = useState(1000000000)
+    let [count, setCount] = useState(0)
+
+    function changeHandle(){
+        setCount(++count)
+        setClc(++calc)
+    }
 
     return(
         <div>
-            <div className="display-count">Count : 0</div>
-            <button onClick={() => setCount(count * 10)}>+</button>
+            <div className="incr-cnt">Count : {count}</div>
+            <button className="incr-btn" onClick={changeHandle}>+</button>
             <h2>Expensive Calculation</h2>
-            <div>{count}</div>
+            <div className="calc">{calc}</div>
         </div>
     )
 }

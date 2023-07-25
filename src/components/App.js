@@ -6,7 +6,8 @@ import Memo from "./Memo";
 
 const App = () => {
     return(
-        <div>
+        <div className="main">
+            <h1>React.useMemo</h1>
             <Todo />
             <Count />
             <Memo />
